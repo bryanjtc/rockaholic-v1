@@ -21,7 +21,6 @@ public class CharacterController2D : MonoBehaviour
     CapsuleCollider2D mainCollider;
     Transform t;
 
-    Animator mageAnim;
 
 
     // Use this for initialization
@@ -40,7 +39,6 @@ public class CharacterController2D : MonoBehaviour
             cameraPos = mainCamera.transform.position;
         }
 
-        mageAnim = GetComponent<Animator>();
     }
 
 
@@ -51,14 +49,12 @@ public class CharacterController2D : MonoBehaviour
         if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)) && (isGrounded || Mathf.Abs(r2d.velocity.x) > 0.01f))
         {
             moveDirection = Input.GetKey(KeyCode.A) ? -1 : 1;
-            mageAnim.SetBool("walk", true);
         }
         else
         {
             if (isGrounded || r2d.velocity.magnitude < 0.01f)
             {
                 moveDirection = 0;
-                mageAnim.SetBool("walk", false);
             }
         }
 
@@ -81,16 +77,10 @@ public class CharacterController2D : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.W) && isGrounded)
         {
             r2d.velocity = new Vector2(r2d.velocity.x, jumpHeight);
-            mageAnim.SetBool("jump", true);
 
             
         }
-        else {
-            if (isGrounded){
-                  mageAnim.SetBool("jump", false);
-
-            }
-        }
+        
         
 
         
