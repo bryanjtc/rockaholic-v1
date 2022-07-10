@@ -22,6 +22,11 @@ public class CharacterController2D : MonoBehaviour
     Transform t;
 
 
+    [SerializeField] private LayerMask groundLayer;
+    private BoxCollider2D boxCollider;
+    [SerializeField] private LayerMask wallLayer;
+
+
 
     // Use this for initialization
     void Start()
@@ -41,6 +46,10 @@ public class CharacterController2D : MonoBehaviour
 
     }
 
+    private void Awake()
+    {
+        boxCollider = GetComponent<BoxCollider2D>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -78,12 +87,8 @@ public class CharacterController2D : MonoBehaviour
         {
             r2d.velocity = new Vector2(r2d.velocity.x, jumpHeight);
 
-            
         }
-        
-        
 
-        
         // Camera follow
         if (mainCamera)
         {
@@ -118,5 +123,20 @@ public class CharacterController2D : MonoBehaviour
         // Simple debug
         Debug.DrawLine(groundCheckPos, groundCheckPos - new Vector3(0, colliderRadius, 0), isGrounded ? Color.green : Color.red);
         Debug.DrawLine(groundCheckPos, groundCheckPos - new Vector3(colliderRadius, 0, 0), isGrounded ? Color.green : Color.red);
+    }
+
+    private bool isAttackGrounded()
+    {
+        RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0, Vector2.down, 0.1f, groundLayer);
+        return raycastHit.collider != null;
+    }
+    private bool onWall()
+    {
+        RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0, new Vector2(transform.localScale.x, 0), 0.1f, wallLayer);
+        return raycastHit.collider != null;
+    }
+    public bool canAttack()
+    {
+        return isAttackGrounded() && !onWall();
     }
 }
