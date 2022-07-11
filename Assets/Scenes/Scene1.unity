@@ -349,7 +349,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7df5ec8f7bfdb1540b869a110d921615, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 7
 --- !u!212 &245986853
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -517,7 +517,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7df5ec8f7bfdb1540b869a110d921615, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 7
 --- !u!212 &249984015
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -777,7 +777,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 2005978208, guid: 3636e133345a7ab4391b228ee095434f, type: 3}
+  m_Sprite: {fileID: -552841147, guid: 3636e133345a7ab4391b228ee095434f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1182,7 +1182,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7df5ec8f7bfdb1540b869a110d921615, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 7
 --- !u!212 &684972477
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1446,7 +1446,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1227513522}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.13, y: 0, z: 1}
+  m_LocalPosition: {x: 0.99, y: 0, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1568,7 +1568,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7df5ec8f7bfdb1540b869a110d921615, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 7
 --- !u!212 &1237657043
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1938,7 +1938,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7df5ec8f7bfdb1540b869a110d921615, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 7
 --- !u!212 &1406778651
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2259,7 +2259,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7df5ec8f7bfdb1540b869a110d921615, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 7
 --- !u!212 &1698714391
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2427,7 +2427,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7df5ec8f7bfdb1540b869a110d921615, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 7
 --- !u!212 &1701961331
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2671,7 +2671,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7df5ec8f7bfdb1540b869a110d921615, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 7
 --- !u!212 &1847774561
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2848,6 +2848,7 @@ GameObject:
   - component: {fileID: 1924654954}
   - component: {fileID: 1924654953}
   - component: {fileID: 1924654952}
+  - component: {fileID: 1924654957}
   m_Layer: 0
   m_Name: Freddy
   m_TagString: Untagged
@@ -2989,6 +2990,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1924654957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1924654951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 534b6720a1e88b844a65ae837576d801, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2009823858
 GameObject:
   m_ObjectHideFlags: 0
@@ -3104,7 +3117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7df5ec8f7bfdb1540b869a110d921615, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 7
 --- !u!212 &2009823864
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3272,7 +3285,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7df5ec8f7bfdb1540b869a110d921615, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 7
 --- !u!212 &2079288255
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3440,7 +3453,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7df5ec8f7bfdb1540b869a110d921615, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 7
 --- !u!212 &2116255487
 SpriteRenderer:
   m_ObjectHideFlags: 0

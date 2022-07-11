@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Fireball_Idle
+  m_Name: Freddy_Hit
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,13 +20,13 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 169533974, guid: 9ec7e203a1221a247854be2d8f4e264d, type: 3}
-    - time: 0.083333336
-      value: {fileID: -2018654763, guid: 9ec7e203a1221a247854be2d8f4e264d, type: 3}
-    - time: 0.16666667
-      value: {fileID: -1036513217, guid: 9ec7e203a1221a247854be2d8f4e264d, type: 3}
-    - time: 0.25
-      value: {fileID: -746052115, guid: 9ec7e203a1221a247854be2d8f4e264d, type: 3}
+      value: {fileID: -931626841, guid: f513005348b448a4aa8486e48b8c9884, type: 3}
+    - time: 0.11666667
+      value: {fileID: -196538232, guid: 793b137b095827941a5f7ecd3dd6427d, type: 3}
+    - time: 0.23333333
+      value: {fileID: 1555257083, guid: 793b137b095827941a5f7ecd3dd6427d, type: 3}
+    - time: 0.35
+      value: {fileID: 2038779747, guid: 793b137b095827941a5f7ecd3dd6427d, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -46,21 +46,21 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 169533974, guid: 9ec7e203a1221a247854be2d8f4e264d, type: 3}
-    - {fileID: -2018654763, guid: 9ec7e203a1221a247854be2d8f4e264d, type: 3}
-    - {fileID: -1036513217, guid: 9ec7e203a1221a247854be2d8f4e264d, type: 3}
-    - {fileID: -746052115, guid: 9ec7e203a1221a247854be2d8f4e264d, type: 3}
+    - {fileID: -931626841, guid: f513005348b448a4aa8486e48b8c9884, type: 3}
+    - {fileID: -196538232, guid: 793b137b095827941a5f7ecd3dd6427d, type: 3}
+    - {fileID: 1555257083, guid: 793b137b095827941a5f7ecd3dd6427d, type: 3}
+    - {fileID: 2038779747, guid: 793b137b095827941a5f7ecd3dd6427d, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.26666668
+    m_StopTime: 0.36666667
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
     m_HasAdditiveReferencePose: 0
-    m_LoopTime: 1
+    m_LoopTime: 0
     m_LoopBlend: 0
     m_LoopBlendOrientation: 0
     m_LoopBlendPositionY: 0

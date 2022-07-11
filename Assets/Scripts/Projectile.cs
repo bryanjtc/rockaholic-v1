@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Projectile : MonoBehaviour
@@ -12,7 +10,7 @@ public class Projectile : MonoBehaviour
     private Animator anim;
     private BoxCollider2D boxCollider;
 
-    private void Start()
+    private void Awake()
     {
         anim = GetComponent<Animator>();
         boxCollider = GetComponent<BoxCollider2D>();
@@ -30,16 +28,17 @@ public class Projectile : MonoBehaviour
     {
         hit = true;
         boxCollider.enabled = false;
+        anim.SetTrigger("explode");
     }
     public void SetDirection(float _direction)
     {
-        float localScaleX = transform.localScale.x;
-
         lifetime = 0;
         direction = _direction;
         gameObject.SetActive(true);
         hit = false;
         boxCollider.enabled = true;
+
+        float localScaleX = transform.localScale.x;
         if (Mathf.Sign(localScaleX) != _direction)
             localScaleX = -localScaleX;
 

@@ -21,6 +21,9 @@ public class CharacterController2D : MonoBehaviour
     CapsuleCollider2D mainCollider;
     Transform t;
 
+    private float horizontalInput;
+    private Animator anim;
+
 
     [SerializeField] private LayerMask groundLayer;
     private BoxCollider2D boxCollider;
@@ -48,12 +51,15 @@ public class CharacterController2D : MonoBehaviour
 
     private void Awake()
     {
+        anim = GetComponent<Animator>();
         boxCollider = GetComponent<BoxCollider2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        horizontalInput = Input.GetAxis("Horizontal");
+
         // Movement controls
         if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)) && (isGrounded || Mathf.Abs(r2d.velocity.x) > 0.01f))
         {
@@ -66,6 +72,8 @@ public class CharacterController2D : MonoBehaviour
                 moveDirection = 0;
             }
         }
+
+        anim.SetBool("run", horizontalInput != 0);
 
         // Change facing direction
         if (moveDirection != 0)
