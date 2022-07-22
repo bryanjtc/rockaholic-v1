@@ -10,7 +10,6 @@ public class EnemyBullet : MonoBehaviour
     private float lifetime;
     private Animator anim;
     private BoxCollider2D boxCollider;
-    private bool hit = false;
     // Start is called before the first frame update
     void Start()
     {

@@ -26,17 +26,13 @@ public class EnemyController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+        rb = GetComponent<Rigidbody2D>();
     }
 
     private void OnCollisionEnter(Collision collision)
     {
         anim.SetTrigger("hit");
-    }
-
-    void Start()
-    {
-        player = GameObject.FindGameObjectWithTag("Player").transform;
-        rb = GetComponent<Rigidbody2D>();
     }
 
     void Update()
