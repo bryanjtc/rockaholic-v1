@@ -33,7 +33,7 @@ public class EnemyBullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //anim.SetTrigger("explode");
+        anim.SetTrigger("explode");
         other.GetComponent<CharacterController2D>().TakeDamage(5);
         Destroy (this.gameObject);
 
