@@ -112,6 +112,7 @@ public class CharacterController2D : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        anim.SetTrigger("hit");
         currentHealth -= damage;
         healthBar.SetHealth(currentHealth);
         if(currentHealth<=0){
