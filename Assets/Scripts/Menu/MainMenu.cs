@@ -5,9 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    public float delayTime = 2f;
 
     public void PlayGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        Invoke("DelayedAction", delayTime);
+    }
+
+    void DelayedAction(){
+       SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
