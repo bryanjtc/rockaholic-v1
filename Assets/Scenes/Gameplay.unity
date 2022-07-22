@@ -427,6 +427,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 7
   enemyController: {fileID: 1924654957}
+  playerGameObject: {fileID: 0}
+  NTime: 0
 --- !u!212 &245986853
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -596,6 +598,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 7
   enemyController: {fileID: 1924654957}
+  playerGameObject: {fileID: 0}
+  NTime: 0
 --- !u!212 &249984015
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1341,6 +1345,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 7
   enemyController: {fileID: 1924654957}
+  playerGameObject: {fileID: 0}
+  NTime: 0
 --- !u!212 &684972477
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1805,6 +1811,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 7
   enemyController: {fileID: 1924654957}
+  playerGameObject: {fileID: 0}
+  NTime: 0
 --- !u!212 &1237657043
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2234,6 +2242,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 7
   enemyController: {fileID: 1924654957}
+  playerGameObject: {fileID: 0}
+  NTime: 0
 --- !u!212 &1406778651
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2767,6 +2777,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 7
   enemyController: {fileID: 1924654957}
+  playerGameObject: {fileID: 0}
+  NTime: 0
 --- !u!212 &1698714391
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2936,6 +2948,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 7
   enemyController: {fileID: 1924654957}
+  playerGameObject: {fileID: 0}
+  NTime: 0
 --- !u!212 &1701961331
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3105,6 +3119,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 7
   enemyController: {fileID: 1924654957}
+  playerGameObject: {fileID: 0}
+  NTime: 0
 --- !u!212 &1847774561
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3204,7 +3220,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 4d2b7f475e3653c48a9f7a309bb6142c, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 2871a0ece53f02d4687e9ea8416b65ba, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.271
   m_Pitch: 1
@@ -3695,6 +3711,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 7
   enemyController: {fileID: 1924654957}
+  playerGameObject: {fileID: 0}
+  NTime: 0
 --- !u!212 &2009823864
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3864,6 +3882,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 7
   enemyController: {fileID: 1924654957}
+  playerGameObject: {fileID: 0}
+  NTime: 0
 --- !u!212 &2079288255
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4064,6 +4084,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 7
   enemyController: {fileID: 1924654957}
+  playerGameObject: {fileID: 0}
+  NTime: 0
 --- !u!212 &2116255487
 SpriteRenderer:
   m_ObjectHideFlags: 0
