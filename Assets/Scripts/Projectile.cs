@@ -8,13 +8,15 @@ public class Projectile : MonoBehaviour
     private float lifetime;
 
     private Animator anim;
-    private BoxCollider2D boxCollider;
     public EnemyController enemyController;
+
+    public GameObject playerGameObject;
+    public AnimatorStateInfo animStateInfo;
+    public float NTime;
 
     private void Awake()
     {
         anim = GetComponent<Animator>();
-        boxCollider = GetComponent<BoxCollider2D>();
     }
     private void Update()
     {
@@ -27,10 +29,11 @@ public class Projectile : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        animStateInfo = anim.GetCurrentAnimatorStateInfo(0);
+        NTime = animStateInfo.normalizedTime;
         anim.SetTrigger("explode");
-
         hit = true;
-        boxCollider.enabled = false;
+        if (NTime > 1.0f) gameObject.SetActive(false);
         enemyController.TakeDamage(1);
         enemyController.Hurt();
     }
@@ -41,7 +44,6 @@ public class Projectile : MonoBehaviour
         direction = _direction;
         gameObject.SetActive(true);
         hit = false;
-        boxCollider.enabled = true;
 
         float localScaleX = transform.localScale.x;
         if (Mathf.Sign(localScaleX) != _direction)

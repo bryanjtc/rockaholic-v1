@@ -10,14 +10,14 @@ public class EnemyBullet : MonoBehaviour
     Rigidbody2D bulletRB;
     private float lifetime;
     private Animator anim;
-    private BoxCollider2D boxCollider;
-    public GameObject playerGameObject; 
-    // Start is called before the first frame update
+    public GameObject playerGameObject;
+    public AnimatorStateInfo animStateInfo;
+    public float NTime;
+
     void Start()
     {
         playerGameObject = GameObject.Find("Player");
         anim = GetComponent<Animator>();
-        boxCollider = GetComponent<BoxCollider2D>();
         gameObject.SetActive(true);
         bulletRB = GetComponent<Rigidbody2D>();
         target = GameObject.FindGameObjectWithTag("Player");
@@ -34,9 +34,10 @@ public class EnemyBullet : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         anim.SetTrigger("explode");
-        playerGameObject.GetComponent<CharacterController2D>().TakeDamage(5);
-        Destroy (this.gameObject);
-
+        animStateInfo = anim.GetCurrentAnimatorStateInfo(0);
+        NTime = animStateInfo.normalizedTime;
+        playerGameObject.GetComponent<CharacterController2D>().TakeDamage(1);
+        if (NTime > 1.0f) Destroy(this.gameObject);
     }
 
 }
