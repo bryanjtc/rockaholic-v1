@@ -27,8 +27,9 @@ public class Projectile : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        hit = true;
         anim.SetTrigger("explode");
+
+        hit = true;
         boxCollider.enabled = false;
         enemyController.TakeDamage(1);
         enemyController.Hurt();
