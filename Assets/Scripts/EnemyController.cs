@@ -30,7 +30,12 @@ public class EnemyController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void Awake()
+    {
+        anim = GetComponent<Animator>();
+    }
+
+    public void Hurt()
     {
         anim.SetTrigger("hit");
     }
@@ -50,6 +55,7 @@ public class EnemyController : MonoBehaviour
 
         else if (distanceFromPlayer <= shootingRange && nextFireTime < Time.time && distanceFromPlayer > 4)
         {
+            anim.SetTrigger("attack");
             Instantiate(bullet, bulletEmitter.transform.position, Quaternion.identity);
             nextFireTime = Time.time + fireRate;
         }
