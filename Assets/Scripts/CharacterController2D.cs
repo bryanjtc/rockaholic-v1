@@ -31,7 +31,7 @@ public class CharacterController2D : MonoBehaviour
 
 
     public int maxHealth = 100;
-	public int currentHealth;
+    public int currentHealth;
     public HealthBar healthBar;
 
     // Use this for initialization
@@ -45,7 +45,7 @@ public class CharacterController2D : MonoBehaviour
         r2d.gravityScale = gravityScale;
         facingRight = t.localScale.x > 0;
         currentHealth = maxHealth;
-		healthBar.SetMaxHealth(maxHealth);
+        healthBar.SetMaxHealth(maxHealth);
 
         if (mainCamera)
         {
@@ -107,19 +107,13 @@ public class CharacterController2D : MonoBehaviour
         {
             mainCamera.transform.position = new Vector3(t.position.x, cameraPos.y, cameraPos.z);
         }
-
-        if (Input.GetKeyDown(KeyCode.Space))
-		{
-			TakeDamage(20);
-		}
     }
 
-    void TakeDamage(int damage)
-	{
-		currentHealth -= damage;
-
-		healthBar.SetHealth(currentHealth);
-	}
+    public void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+        healthBar.SetHealth(currentHealth);
+    }
 
     void FixedUpdate()
     {
