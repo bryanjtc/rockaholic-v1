@@ -30,6 +30,9 @@ public class CharacterController2D : MonoBehaviour
     [SerializeField] private LayerMask wallLayer;
 
 
+    public int maxHealth = 100;
+	public int currentHealth;
+    public HealthBar healthBar;
 
     // Use this for initialization
     void Start()
@@ -41,6 +44,8 @@ public class CharacterController2D : MonoBehaviour
         r2d.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
         r2d.gravityScale = gravityScale;
         facingRight = t.localScale.x > 0;
+        currentHealth = maxHealth;
+		healthBar.SetMaxHealth(maxHealth);
 
         if (mainCamera)
         {
@@ -102,7 +107,19 @@ public class CharacterController2D : MonoBehaviour
         {
             mainCamera.transform.position = new Vector3(t.position.x, cameraPos.y, cameraPos.z);
         }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+		{
+			TakeDamage(20);
+		}
     }
+
+    void TakeDamage(int damage)
+	{
+		currentHealth -= damage;
+
+		healthBar.SetHealth(currentHealth);
+	}
 
     void FixedUpdate()
     {

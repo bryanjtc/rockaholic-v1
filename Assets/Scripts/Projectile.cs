@@ -9,6 +9,7 @@ public class Projectile : MonoBehaviour
 
     private Animator anim;
     private BoxCollider2D boxCollider;
+    public EnemyController enemyController;
 
     private void Awake()
     {
@@ -29,6 +30,7 @@ public class Projectile : MonoBehaviour
         hit = true;
         boxCollider.enabled = false;
         anim.SetTrigger("explode");
+        enemyController.TakeDamage(10);
     }
     public void SetDirection(float _direction)
     {
