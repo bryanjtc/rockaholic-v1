@@ -314,6 +314,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93b5bce8901c07d4d853c22aac58cbb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  delayTime: 2
 --- !u!1 &352386702
 GameObject:
   m_ObjectHideFlags: 0
@@ -462,6 +463,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93b5bce8901c07d4d853c22aac58cbb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  delayTime: 2
 --- !u!1 &411794557
 GameObject:
   m_ObjectHideFlags: 0
@@ -500,7 +502,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 168, y: -226}
+  m_AnchoredPosition: {x: 195.82, y: -127.64}
   m_SizeDelta: {x: 201.1071, y: 62.1149}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &411794559
@@ -664,8 +666,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190335
+  m_fontColor: {r: 1, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -803,7 +805,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: PLAY AGAIN
+  m_Text: TRY AGAIN
 --- !u!222 &807647124
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -863,7 +865,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.392}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1010,7 +1012,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -226.82, y: -225.36}
+  m_AnchoredPosition: {x: -199, y: -127}
   m_SizeDelta: {x: 201.11, y: 60.8304}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1938316670
