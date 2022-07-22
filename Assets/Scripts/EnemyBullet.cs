@@ -11,11 +11,11 @@ public class EnemyBullet : MonoBehaviour
     private float lifetime;
     private Animator anim;
     private BoxCollider2D boxCollider;
-    public GameObject other; 
+    public GameObject playerGameObject; 
     // Start is called before the first frame update
     void Start()
     {
-        other = GameObject.Find("Player");
+        playerGameObject = GameObject.Find("Player");
         anim = GetComponent<Animator>();
         boxCollider = GetComponent<BoxCollider2D>();
         gameObject.SetActive(true);
@@ -33,8 +33,8 @@ public class EnemyBullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //anim.SetTrigger("explode");
-        other.GetComponent<CharacterController2D>().TakeDamage(5);
+        anim.SetTrigger("explode");
+        playerGameObject.GetComponent<CharacterController2D>().TakeDamage(5);
         Destroy (this.gameObject);
 
     }
