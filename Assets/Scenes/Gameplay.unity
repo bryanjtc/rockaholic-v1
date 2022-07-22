@@ -768,8 +768,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxSpeed: 3.4
-  jumpHeight: 6.5
-  gravityScale: 1.5
+  jumpHeight: 9
+  gravityScale: 1.4
   mainCamera: {fileID: 1270661675}
   groundLayer:
     serializedVersion: 2
@@ -793,8 +793,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.04365458, y: 0}
-  m_Size: {x: 0.91269064, y: 1}
+  m_Offset: {x: -0.021994079, y: -0.045271374}
+  m_Size: {x: 0.5280787, y: 0.90945727}
   m_Direction: 0
 --- !u!50 &439021448
 Rigidbody2D:
@@ -918,7 +918,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.027072683, y: 0.009201348}
+  m_Offset: {x: -0.022461712, y: -0.08482595}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -929,7 +929,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.94585466, y: 1.0184027}
+  m_Size: {x: 0.52165806, y: 0.81363213}
   m_EdgeRadius: 0
 --- !u!114 &439021453
 MonoBehaviour:
