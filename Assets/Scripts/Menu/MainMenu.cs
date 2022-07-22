@@ -13,6 +13,20 @@ public class MainMenu : MonoBehaviour
     }
 
     void DelayedAction(){
-       SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+       SceneManager.LoadScene(1);
     }
+
+    public void ReMainMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
+
+    public void QuitGame()
+    {
+        Debug.Log("QUITTED THE GAME");
+        Application.Quit();
+
+    }
+
+
 }
