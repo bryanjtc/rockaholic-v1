@@ -961,6 +961,8 @@ MonoBehaviour:
   - {fileID: 249984009}
   - {fileID: 684972471}
   - {fileID: 2009823858}
+  bullet: {fileID: 1219140294581623642, guid: f6d8eb9a6d49a1a428b8217e9f2c9e2f, type: 3}
+  bulletEmitter: {fileID: 1227513522}
 --- !u!1 &494810003
 GameObject:
   m_ObjectHideFlags: 0
@@ -3433,7 +3435,7 @@ GameObject:
   - component: {fileID: 1924654957}
   m_Layer: 0
   m_Name: Freddy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3960,7 +3962,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2096271886}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.563, y: -0.12235823, z: -0.0055906572}
+  m_LocalPosition: {x: -0.725, y: -0.12235823, z: -0.0055906572}
   m_LocalScale: {x: 0.40909746, y: 0.37078235, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
