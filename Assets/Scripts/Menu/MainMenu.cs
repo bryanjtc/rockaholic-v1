@@ -13,12 +13,13 @@ public class MainMenu : MonoBehaviour
     }
 
     void DelayedAction(){
-       SceneManager.LoadScene(SceneManager.1);
+       SceneManager.LoadScene(1);
     }
 
     public void ReMainMenu()
     {
         SceneManager.LoadScene(0);
     }
+
 
 }
