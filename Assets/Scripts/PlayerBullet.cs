@@ -3,24 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class EnemyBullet : MonoBehaviour
+public class PlayerBullet : MonoBehaviour
 {
     GameObject target;
     public float speed;
     Rigidbody2D bulletRB;
     private float lifetime;
     private Animator anim;
-    public GameObject playerGameObject;
+    public GameObject enemyGameObject;
     public AnimatorStateInfo animStateInfo;
     public float NTime;
 
     void Start()
     {
-        playerGameObject = GameObject.Find("Player");
+        enemyGameObject = GameObject.Find("Freddy");
         anim = GetComponent<Animator>();
         gameObject.SetActive(true);
         bulletRB = GetComponent<Rigidbody2D>();
-        target = GameObject.FindGameObjectWithTag("Player");
+        target = GameObject.FindGameObjectWithTag("Enemy");
         Vector2 moveDir = (target.transform.position - transform.position).normalized * speed;
         bulletRB.velocity = new Vector2(moveDir.x, moveDir.y);
         StartCoroutine(SelfDestruct());
@@ -31,26 +31,26 @@ public class EnemyBullet : MonoBehaviour
         }
     }
 
-    
-
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject == GameObject.Find("Player")){
-            anim.SetTrigger("explode");
-            animStateInfo = anim.GetCurrentAnimatorStateInfo(0);
-            NTime = animStateInfo.normalizedTime;
-            playerGameObject.GetComponent<CharacterController2D>().TakeDamage(1);
-            StartCoroutine(DestroyTimer());
-            IEnumerator DestroyTimer ()
-            {
-                yield return new WaitForSeconds(0.5f);
-                Destroy(this.gameObject);
-            }
-            }
+        
+        if (collision.gameObject == GameObject.Find("Freddy")){
+        anim.SetTrigger("explode");
+        animStateInfo = anim.GetCurrentAnimatorStateInfo(0);
+        NTime = animStateInfo.normalizedTime;
+        enemyGameObject.GetComponent<EnemyController>().TakeDamage(1);
+        enemyGameObject.GetComponent<EnemyController>().Hurt();
+        StartCoroutine(DestroyTimer());
+        IEnumerator DestroyTimer ()
+        {
+            yield return new WaitForSeconds(0.7f);
+            Destroy(this.gameObject);
+        }
+        }
         else Destroy(this.gameObject);
+
     }
 
-
+    
 
 }

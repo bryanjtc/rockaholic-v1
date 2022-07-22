@@ -9,6 +9,9 @@ public class PlayerAttack : MonoBehaviour
     private Animator anim;
     private CharacterController2D playerMovement;
     private float cooldownTimer = Mathf.Infinity;
+    public GameObject bullet;
+    public GameObject bulletEmitter;
+    private Transform player;
 
     private void Awake()
     {
@@ -28,11 +31,13 @@ public class PlayerAttack : MonoBehaviour
     {
         anim.SetTrigger("attack");
         cooldownTimer = 0;
-
-        fireballs[FindFireball()].transform.position = firePoint.position;
-        fireballs[FindFireball()].GetComponent<Projectile>().SetDirection(Mathf.Sign(transform.localScale.x));
+        Instantiate(bullet, bulletEmitter.transform.position, Quaternion.identity);
+        //fireballs[FindFireball()].transform.position = firePoint.position;
+        //fireballs[FindFireball()].GetComponent<Projectile>().SetDirection(Mathf.Sign(transform.localScale.x));
     }
-    private int FindFireball()
+    
+    
+    /*private int FindFireball()
     {
         for (int i = 0; i < fireballs.Length; i++)
         {
@@ -40,5 +45,5 @@ public class PlayerAttack : MonoBehaviour
                 return i;
         }
         return 0;
-    }
+    }*/
 }
